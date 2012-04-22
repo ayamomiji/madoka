@@ -1,5 +1,6 @@
 require "madoka/version"
 
 module Madoka
-  # Your code goes here...
+  autoload :Model,        'madoka/model'
+  autoload :ModelInvalid, 'madoka/model_invalid'
 end

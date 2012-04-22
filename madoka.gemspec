@@ -14,4 +14,13 @@ Gem::Specification.new do |gem|
   gem.name          = "madoka"
   gem.require_paths = ["lib"]
   gem.version       = Madoka::VERSION
+
+  gem.add_dependency 'activemodel'
+  gem.add_dependency 'activerecord'
+  gem.add_dependency 'activesupport'
+
+  gem.add_development_dependency 'rspec', '~> 2.5'
+  gem.add_development_dependency 'guard-rspec'
+  gem.add_development_dependency 'shoulda-matchers'
+  gem.add_development_dependency 'rr'
 end
