@@ -4,9 +4,9 @@ require File.expand_path('../lib/madoka/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["ayaya"]
   gem.email         = ["ayaya@ayaya.tw"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A model based on ActiveModel that provides mass assignment with role support.}
+  gem.summary       = %q{A model based on ActiveModel that provides mass assignment with role support.}
+  gem.homepage      = "https://github.com/ayamomiji/madoka"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

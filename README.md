@@ -1,6 +1,6 @@
 # Madoka
 
-TODO: Write a gem description
+A model based on ActiveModel that provides mass assignment with role support.
 
 ## Installation
 
@@ -18,7 +18,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+An example from spec:
+
+    class MadokaModel
+      include Madoka::Model
+      attr_accessor :accessible_by_default, :protected_by_default
+      attr_accessor :accessible_by_admin
+      attr_accessible :accessible_by_default
+      attr_protected :protected_by_default
+      attr_accessible :accessible_by_admin, as: :admin
+
+      attr_accessor :flow
+
+      before_save :run_before_save
+      after_save :run_after_save
+
+      def run_before_save
+        @flow = [:before_save]
+      end
+
+      def run_after_save
+        @flow << :after_save
+      end
+    end
+
+## Todo
+
+* Work with multiparameter
 
 ## Contributing
 
